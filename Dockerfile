@@ -39,6 +39,7 @@ RUN ${BUILD} uhd-firmware ${PARMS}
 RUN ${BUILD} volk=main ${PARMS}
 RUN ${APT} install python3-pygccxml/bookworm
 RUN ${BUILD} gnuradio=maint-3.10 ${PARMS}
+RUN ${APT} -t bookworm install nodejs
 RUN ${BUILD} gr-bokehgui=master ${PARMS}
 RUN ${BUILD} gr-iqbal=master ${PARMS}
 # RUN ${BUILD} fft-web ${PARMS}
